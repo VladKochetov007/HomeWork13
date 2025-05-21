@@ -1,0 +1,133 @@
+========================================
+### Starting Homework 13 Solution ###
+========================================
+
+---------- Task 10.3.1: isIterable ----------
+Demonstrating isIterable function:
+
+Testing various objects:
+Object 1 (list): [1, 2, 3]
+  - Is iterable. Contents:
+    - 1
+    - 2
+    - 3
+--------------------
+Object 2 (str): hello
+  - Is iterable. Contents:
+    - h
+    - e
+    - l
+    - l
+    - o
+--------------------
+Object 3 (tuple): (4, 5, 6)
+  - Is iterable. Contents:
+    - 4
+    - 5
+    - 6
+--------------------
+Object 4 (range): range(0, 5)
+  - Is iterable. Contents:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+--------------------
+Object 5 (dict): {'a': 1, 'b': 2}
+  - Is iterable. Contents:
+    - a
+    - b
+--------------------
+Object 6 (set): {1, 2, 3}
+  - Is iterable. Contents:
+    - 1
+    - 2
+    - 3
+--------------------
+Object 7 (int): 123
+  - Is NOT iterable.
+--------------------
+Object 8 (NoneType): None
+  - Is NOT iterable.
+--------------------
+Object 9 (function): <function demonstrate_task_10_3_1.<locals>.<lambda> at 0x7f6f8c1a5760>
+  - Is NOT iterable.
+--------------------
+
+========================================
+
+---------- Task 10.3.2: Create class from string ----------
+Demonstrating class creation from string:
+Attempting to create class 'MyDynamicClass' from string:
+```python
+
+class MyDynamicClass:
+    message = "Hello from MyDynamicClass!"
+
+    def __init__(self, value: int):
+        self.value = value
+        print(f"MyDynamicClass instance created with value: {self.value}")
+
+    def display(self) -> None:
+        print(f"MyDynamicClass instance: value = {self.value}, message = '{self.message}'")
+
+    @staticmethod
+    def static_method_example() -> str:
+        return "This is a static method."
+
+    @classmethod
+    def class_method_example(cls) -> str:
+        return f"This is a class method of {cls.__name__}"
+
+```
+
+Successfully created class: <class '__main__.MyDynamicClass'>
+Class name: MyDynamicClass
+Calling static method: This is a static method.
+Calling class method: This is a class method of MyDynamicClass
+
+Attempting to instantiate the dynamic class...
+MyDynamicClass instance created with value: 100
+MyDynamicClass instance: value = 100, message = 'Hello from MyDynamicClass!'
+
+========================================
+
+---------- Task 10.3.3: Function call logger decorator ----------
+Demonstrating function call logger decorator:
+
+Calling decorated standalone function 'example_function':
+Calling function/method: 'example_function' with arguments: args=(10, 20), kwargs={'c': 'test'}
+  Inside example_function: a=10, b=20, c='test'
+Function/method 'example_function' finished execution.
+  Return value from example_function: 'Result: 30, c was 'test''
+
+Creating an instance of ExampleClassWithMethod and calling decorated method 'greet':
+Calling function/method: 'greet' with arguments: args=(<__main__.ExampleClassWithMethod object at 0x7f6f8c0f2b70>, 'Hello from the decorated method!'), kwargs={}
+  Inside MyObject's greet method: message='Hello from the decorated method!'
+Function/method 'greet' finished execution.
+  Return value from greet: 'MyObject says: Hello from the decorated method!'
+
+========================================
+
+---------- Task 10.3.4: Class instantiation logger decorator ----------
+Demonstrating class instantiation logger decorator:
+
+Creating instance of MyDecoratedClass:
+Creating an instance of class: 'MyDecoratedClass' using __new__
+  MyDecoratedClass.__init__ called with x=42, y='hello decorated class'
+  Instance info: MyDecoratedClass instance with x=42, y='hello decorated class'
+
+Creating instance of AnotherDecoratedClass:
+Creating an instance of class: 'AnotherDecoratedClass' using __new__
+  AnotherDecoratedClass.__init__ called with name='Test Instance'
+  Instance name: Test Instance
+
+Creating another instance of MyDecoratedClass:
+Creating an instance of class: 'MyDecoratedClass' using __new__
+  MyDecoratedClass.__init__ called with x=0, y='another'
+  Instance info: MyDecoratedClass instance with x=0, y='another'
+
+========================================
+### Homework 13 Solution Finished ###
+======================================== 
